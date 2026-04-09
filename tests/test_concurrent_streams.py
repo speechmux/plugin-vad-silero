@@ -18,6 +18,7 @@ import torch
 
 from speechmux_plugin_vad.engine.dummy import DummyVADEngine
 from speechmux_plugin_vad.service.vad_servicer import VADPluginServicer
+from google.protobuf import empty_pb2
 from stt_proto.vad.v1 import vad_pb2
 
 
@@ -133,7 +134,7 @@ def test_silero_active_count_returns_to_zero():
     _join_all(threads)
 
     assert not errors
-    health = svc.HealthCheck(vad_pb2.Empty(), _make_context())
+    health = svc.HealthCheck(empty_pb2.Empty(), _make_context())
     assert health.active == 0
 
 
