@@ -25,6 +25,7 @@ file itself.
 ```
 plugin-vad-<impl>/
 ├── AGENTS.md                 # this file — verbatim copy of plugin-vad/templates/AGENTS.md
+├── CLAUDE.md                 # one line: `@AGENTS.md` — never a copy of the rules
 ├── ENGINE.md                 # engine-specific rules, pitfalls and rationale
 ├── README.md                 # user-facing: install, config keys, model download
 ├── LICENSE
@@ -121,6 +122,7 @@ Never depend on Core, another engine, or `grpc` server machinery.
 - Write a test that needs downloaded model weights.
 - Diverge the `Makefile` from the other engine repos.
 - Edit this file. Edit `plugin-vad/templates/AGENTS.md` and re-copy.
+- Put anything in `CLAUDE.md` other than `@AGENTS.md`.
 
 ## Where the engine-specific rules are
 
