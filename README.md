@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **This repository is archived.** `plugin-vad-silero` now lives in
+> [speechmux/speechmux](https://github.com/speechmux/speechmux/tree/main/plugin-vad-silero), with its
+> full history. Open issues and pull requests there.
+
 # speechmux/plugin-vad-silero
 
 Silero VAD engine plugin for SpeechMux. Depends on `speechmux-plugin-vad` for the `VADEngine` Protocol. `SileroVADEngine` inherits from `VADEngine` and is registered via `entry_points` so the base server discovers it automatically when `server.engine: silero` is set in the config YAML.
